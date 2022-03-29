@@ -85,13 +85,89 @@
 
 
 
-a=int(input("Enter the value : "))
-sum=0
-for i in range(1,a):
-    if a%i==0:
-        sum+=i
+# a=int(input("Enter the value : "))
+# sum=0
+# for i in range(1,a):
+#     if a%i==0:
+#         sum+=i
 
-if sum==a:
-    print("perfect")
-else:
-    print("Not perfect")        
+# if sum==a:
+#     print("perfect")
+# else:
+#     print("Not perfect")        
+
+
+# k=eval(input("enter thew value of the list :"))
+# l=list(k)
+# nl=[]
+# for i in l:
+#     if i not in nl:
+#         nl.append(i)
+# t=tuple(nl)
+# print(t)    
+
+
+# k=eval(input("enter thew value of the list :"))
+# l=list(k)
+
+# for i in l:
+#    l.remove(i)
+#    i=i+2
+# t=tuple(l)
+# print(t)    
+
+def armstrong(a):
+    temp=a
+    sum=0
+    c=0
+    while temp!=0:
+        temp//=10
+        c=c+1
+    temp=a
+
+    while a > 0:
+        r=a%10
+        f=pow(r,c)
+        sum=sum+f
+        a=a//10
+
+    if temp==sum:
+        print("Armstrong Number :") 
+    else:
+        print("Not Armstrong Number :") 
+
+
+
+def palindrome(a):
+    temp=a
+    rev=0
+    while a > 0:
+        r=a%10
+        rev=rev*10+r
+        a//=10
+    if temp==rev:
+        print("palindrome")
+    else:
+        print(" Not palindrome")
+
+
+
+def perfect(a):
+    sum=0
+    for i in range(1,a):
+        if a%i==0:
+            sum+=i
+
+    if sum==a:
+        print("perfect")
+    else:
+        print("Not perfect")        
+
+
+
+a=int(input("Enter the value : "))
+armstrong(a)
+a=int(input("Enter the value : "))
+palindrome(a)
+a=int(input("Enter the value : "))
+perfect(a)

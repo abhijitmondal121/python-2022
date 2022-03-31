@@ -116,58 +116,98 @@
 # t=tuple(l)
 # print(t)    
 
-def armstrong(a):
-    temp=a
-    sum=0
-    c=0
-    while temp!=0:
-        temp//=10
-        c=c+1
-    temp=a
+# def armstrong(a):
+#     temp=a
+#     sum=0
+#     c=0
+#     while temp!=0:
+#         temp//=10
+#         c=c+1
+#     temp=a
 
-    while a > 0:
-        r=a%10
-        f=pow(r,c)
-        sum=sum+f
-        a=a//10
+#     while a > 0:
+#         r=a%10
+#         f=pow(r,c)
+#         sum=sum+f
+#         a=a//10
 
-    if temp==sum:
-        print("Armstrong Number :") 
-    else:
-        print("Not Armstrong Number :") 
-
-
-
-def palindrome(a):
-    temp=a
-    rev=0
-    while a > 0:
-        r=a%10
-        rev=rev*10+r
-        a//=10
-    if temp==rev:
-        print("palindrome")
-    else:
-        print(" Not palindrome")
+#     if temp==sum:
+#         print("Armstrong Number :") 
+#     else:
+#         print("Not Armstrong Number :") 
 
 
 
-def perfect(a):
-    sum=0
-    for i in range(1,a):
-        if a%i==0:
-            sum+=i
+# def palindrome(a):
+#     temp=a
+#     rev=0
+#     while a > 0:
+#         r=a%10
+#         rev=rev*10+r
+#         a//=10
+#     if temp==rev:
+#         print("palindrome")
+#     else:
+#         print(" Not palindrome")
 
-    if sum==a:
-        print("perfect")
-    else:
-        print("Not perfect")        
+
+
+# def perfect(a):
+#     sum=0
+#     for i in range(1,a):
+#         if a%i==0:
+#             sum+=i
+
+#     if sum==a:
+#         print("perfect")
+#     else:
+#         print("Not perfect")        
 
 
 
-a=int(input("Enter the value : "))
-armstrong(a)
-a=int(input("Enter the value : "))
-palindrome(a)
-a=int(input("Enter the value : "))
-perfect(a)
+# a=int(input("Enter the value : "))
+# armstrong(a)
+# a=int(input("Enter the value : "))
+# palindrome(a)
+# a=int(input("Enter the value : "))
+# perfect(a)
+
+
+
+# d={1:1,2:2,3:3,4:4,5:5}
+# sum=0
+# for i in d.values():
+#     sum=sum+i
+# print(sum)    
+
+# s={}
+# n=int(input("Enter the range : "))
+# for i in range (0,n):
+#     key=input("Enter the key : ")
+#     value=input("Enter the value : ")
+#     s[key]=value
+
+# key=input("Enter the key : ")
+# if key in s.keys():
+#     print("present")
+# else:
+#     print("Not present")    
+
+
+s1={}
+n=int(input("Enter the range : "))
+for i in range (0,n):
+    key=input("Enter the key : ")
+    value=input("Enter the value : ")
+    s1[key]=value
+
+s2={}
+n=int(input("Enter the range : "))
+for i in range (0,n):
+    key=input("Enter the key : ")
+    value=input("Enter the value : ")
+    s2[key]=value
+
+# s3={}
+s2.update(s1)
+print(s2)
